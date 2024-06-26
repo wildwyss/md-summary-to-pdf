@@ -1,0 +1,14 @@
+Just run `createPdf.sh <your-desired-pdf-name>`
+
+
+The script does:
+
+1. `pandoc -o output.tex -f markdown -t latex --template=../template.tex *.md --listings`
+    1. use template `template.tex`
+2. replace all images: `%s/\\includegraphics{\(.*\)}/\\begin{figure}[H]\\centering\\includegraphics[width=\\imagewidth]{\1}\\end{figure}`
+` output.tex
+3. replace `%s/\\\[//g` output.tex
+4. replace `%s/\\\]//g` output.tex
+5. replace `%s/\\\$\\\$//` output.tex
+6 `pdflatex  -interaction=nonstopmode output2.tex`
+
