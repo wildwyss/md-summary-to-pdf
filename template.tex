@@ -1,23 +1,41 @@
-\documentclass{article}
+\documentclass[9pt]{extarticle}
+\usepackage{paralist}
 \usepackage{multicol}
 \usepackage{pdflscape}
 \usepackage[margin=0.5cm]{geometry}
 \usepackage{breqn,lipsum}
 \usepackage{amsmath,amssymb}
+% weniger Abstand
+\usepackage{titlesec}
+\usepackage{parskip}
+\setlength{\parskip}{0.5em} % Abstand zwischen Absätzen
+\setlength{\parindent}{0em} % Einrückung der ersten Zeile eines neuen Absatzes
+\titlespacing*{\section}{0pt}{*0.5}{*0.5}
+\titlespacing*{\subsection}{0pt}{*0.5}{*0.5}
+\titlespacing*{\subsubsection}{0pt}{*0.5}{*0.5}
+\setlength{\intextsep}{5pt plus 2pt minus 2pt} % Abstand um Floats (z.B. Bilder)
+\setlength{\textfloatsep}{5pt plus 2pt minus 2pt} % Abstand um Floats im Text
+\setlength{\floatsep}{5pt plus 2pt minus 2pt} % Abstand zwischen zwei Floats
+% Globale Anpassung der Abstände vor und nach mathematischen Umgebungen
+\setlength{\abovedisplayskip}{5pt} % Abstand vor einer mathematischen Umgebung
+\setlength{\belowdisplayskip}{5pt} % Abstand nach einer mathematischen Umgebung
+\setlength{\abovedisplayshortskip}{5pt} % Abstand vor einer kurzen mathematischen Umgebung
+\setlength{\belowdisplayshortskip}{5pt} % Abstand nach einer kurzen mathematischen Umgebung
+% code listings
 \usepackage{listings}
-\lstset{basicstyle=\small, breaklines=true}
+\lstset{basicstyle=\ttfamily\small, breaklines=true}
 \lstset{language=C++,
-                basicstyle=\small,
-                keywordstyle=\small\color{blue},
-                stringstyle=\small\color{red},
-                commentstyle=\small\color{teal},
-                morecomment=[l][\small\color{magenta}]{\#}
+                basicstyle=\ttfamily\small,
+                keywordstyle=\ttfamily\small\color{blue},
+                stringstyle=\ttfamily\small\color{red},
+                commentstyle=\ttfamily\small\color{teal},
+                morecomment=[l][\ttfamily\small\color{magenta}]{\#}
 }
 \usepackage{iftex}
 \usepackage{multicol}
 \usepackage{pdflscape}
 \usepackage{float}
-\newcommand{\imagewidth}{200pt}
+\newcommand{\imagewidth}{150pt}
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
